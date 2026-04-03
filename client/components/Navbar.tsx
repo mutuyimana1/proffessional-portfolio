@@ -69,7 +69,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full px-10 md:px-10 2xl:px-80 py-4 flex items-center justify-between relative z-50">
+    <nav className="w-full px-10 md:px-10 2xl:px-64 py-4 flex items-center justify-between relative z-50">
       {/* Logo */}
       <Link
         to="#home"

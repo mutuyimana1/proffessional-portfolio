@@ -31,7 +31,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="mt-s10 p-8 roundexd-2xl bg-gradient-to-r from-[#241918] via-[#16191d] to-[#131313] "
+      className="mt-s10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 roundexd-2xl bg-gradient-to-r from-[#241918] via-[#16191d] to-[#131313] "
     >
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold text-white">Let’s Talk</h2>

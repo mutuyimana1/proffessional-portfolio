@@ -3,7 +3,7 @@ export default function FooterSection() {
     <div className="mt-10 space-y-6">
       
       {/* 🔴 CTA SECTION */}
-      <div className="bg-[#ff3b4a] text-white rounded-2xl px-10 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div className="bg-[#ff3b4a] text-white rounded-2xl  px-4 md:px-8 lg:px-20 xl:px-44 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <h2 className="text-2xl md:text-3xl font-semibold max-w-xl leading-snug">
           Send me a message <br />
           and make something <br />
