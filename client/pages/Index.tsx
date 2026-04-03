@@ -1,5 +1,13 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ServicesTabs from "@/components/ServicesTabs";
+import WorkExperienceSection from "@/components/WorkExperienceSection";
+import RecentWorkSection from "@/components/RecentWorkSection";
+import ContactSection from "@/components/ContactSection";
+import CTASection from "@/components/CTASection";
+import LatestNewsSection from "@/components/LatestNewsSection";
+import FooterSection from "@/components/FooterSection";
 
 export default function Index() {
   return (
@@ -11,7 +19,29 @@ export default function Index() {
       }}
     >
       <Navbar />
-      <HeroSection />
+      <section id="home">
+        <HeroSection />
+      </section>
+      <section id="about">
+        <AboutSection />
+      </section>
+      <section id="services">
+        <ServicesTabs />
+      </section>
+      <section id="experience">
+        <WorkExperienceSection />
+      </section>
+      <section id="portfolio">
+        <RecentWorkSection />
+      </section>
+      <section id="contact">
+        <ContactSection />
+      </section>
+      <CTASection />
+      <section id="blog">
+        <LatestNewsSection />
+      </section>
+      <FooterSection />
     </div>
   );
 }

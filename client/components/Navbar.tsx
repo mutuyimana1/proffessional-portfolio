@@ -1,26 +1,83 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/contact" },
-  { label: "Blog", href: "/blog" },
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Experience", href: "#experience" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "Contact", href: "#contact" },
+  { label: "Blog", href: "#blog" },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
 
+  useEffect(() => {
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const sections = navLinks.map((link) => link.href.substring(1));
+          const scrollPosition = window.scrollY + 150; // Offset for navbar height + some buffer
+
+          for (let i = sections.length - 1; i >= 0; i--) {
+            const section = document.getElementById(sections[i]);
+            if (section) {
+              const sectionTop = section.offsetTop;
+              const sectionHeight = section.offsetHeight;
+              const sectionBottom = sectionTop + sectionHeight;
+
+              if (
+                scrollPosition >= sectionTop &&
+                scrollPosition < sectionBottom
+              ) {
+                setActiveLink(navLinks[i].label);
+                break;
+              }
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (href: string) => {
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      // Update active link immediately for better UX
+      const linkIndex = navLinks.findIndex((link) => link.href === href);
+      if (linkIndex !== -1) {
+        setActiveLink(navLinks[linkIndex].label);
+      }
+    }
+  };
+
   return (
     <nav className="w-full px-6 md:px-10 lg:px-32 py-4 flex items-center justify-between relative z-50">
       {/* Logo */}
       <Link
-        to="/"
-        className="text-white font-bold text-2xl md:text-3xl font-poppins shrink-0"
-        onClick={() => setActiveLink("Home")}
+        to="#home"
+        className="text-white font-bold text-2xl md:text-2xl font-poppins shrink-0"
+        onClick={(e) => {
+          e.preventDefault();
+          scrollToSection("#home");
+        }}
       >
         Alice.M
       </Link>
@@ -28,16 +85,22 @@ export default function Navbar() {
       {/* Desktop Nav Links */}
       <ul className="hidden md:flex items-center gap-6 lg:gap-10">
         {navLinks.map((link) => (
-          <li key={link.label} className="relative flex flex-col items-center gap-1">
+          <li
+            key={link.label}
+            className="relative flex flex-col items-center gap-1"
+          >
             <Link
               to={link.href}
-              className="text-white font-poppins text-base lg:text-lg font-normal hover:text-brand-green transition-colors"
-              onClick={() => setActiveLink(link.label)}
+              className="text-white font-poppins text-base lg:text-md font-normal hover:text-brand-green transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(link.href);
+              }}
             >
               {link.label}
             </Link>
             {activeLink === link.label && (
-              <span className="block h-1 w-10 rounded-full bg-brand-green" />
+              <span className="block h-1 w-10 rounded-full bg-brand-green transition-all duration-300" />
             )}
           </li>
         ))}
@@ -87,8 +150,9 @@ export default function Navbar() {
               key={link.label}
               to={link.href}
               className="text-white font-poppins text-lg hover:text-brand-green transition-colors"
-              onClick={() => {
-                setActiveLink(link.label);
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(link.href);
                 setMobileOpen(false);
               }}
             >
