@@ -79,10 +79,10 @@ export default function ServicesTabs() {
   return (
     <section className="mtz-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 mrounded-2xl bg-gradient-to-r from-[#272620] via-[#1f2937] to-[#222121] ">
       <div className="mb-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-white font-poppins">
           Popular Services
         </h2>
-        <p className="mt-3 text-white/70 max-w-2xl mx-auto">
+        <p className="mt-3 text-white/70 max-w-2xl mx-auto font-poppins">
           Must explain to you how all this mistaken idea of denouncing pleasure
           born and give you a complete account the system.
         </p>
@@ -113,8 +113,8 @@ export default function ServicesTabs() {
           >
             <div className="text-4xl mb-4">{card.icon}</div>
             <h3 className="text-2xl font-bold text-white mb-2">{card.title}</h3>
-            <p className="text-white/70">{card.description}</p>
-            <div className="mt-4 font-semibold text-yellow-300">
+            <p className="text-white/70 font-poppins">{card.description}</p>
+            <div className="mt-4 font-semibold text-yellow-300 font-poppins">
               → READ MORE
             </div>
           </article>

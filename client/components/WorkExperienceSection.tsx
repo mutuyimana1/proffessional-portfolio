@@ -29,10 +29,10 @@ export default function WorkExperienceSection() {
   return (
     <section className="mt-f10 p-6 sm:p-8 px-4 md:px-8 lg:px-20 xl:px-44 roundded-2xl bg-gradient-to-r from-[#291D1C] via-[#211B1B] to-[#191919]">
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-white font-poppins">
           My Work Experience
         </h2>
-        <p className="mt-3 text-white/70 max-w-2xl mx-auto">
+        <p className="mt-3 text-white/70 max-w-2xl mx-auto font-poppins">
           Must explain to you how all this mistaken idea of denouncing pleasure
           born and give you a complete account the system.
         </p>
@@ -52,17 +52,17 @@ export default function WorkExperienceSection() {
                 S
               </div>
               <div>
-                <div className="text-xl md:text-2xl font-semibold text-white">
+                <div className="text-xl md:text-2xl font-semibold text-white font-poppins">
                   {item.title}
                 </div>
-                <div className="text-red-400">{item.company}</div>
+                <div className="text-red-400 font-poppins">{item.company}</div>
               </div>
             </div>
             <a
               href={item.website}
               target="_blank"
               rel="noreferrer"
-              className="text-white font-semibold hover:text-yellow-300 flex items-center gap-2"
+              className="text-white font-semibold hover:text-yellow-300 flex items-center gap-2 font-poppins"
             >
               <span>→</span> Go to Website
             </a>

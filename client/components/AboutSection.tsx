@@ -12,8 +12,8 @@ export default function AboutSection() {
         </div>
 
         <div className="space-y-4">
-          <p className="text-white text-xl font-semibold">My Advantage</p>
-          <p className="text-white/70">
+          <p className="text-white text-xl font-semibold font-poppins">My Advantage</p>
+          <p className="text-white/70 font-poppins">
             Must explain to you how all this mistaken idea of denouncing
             pleasure and praising pain was born and I will give you a complete
             account the system and expound the actual and praising pain was

@@ -34,8 +34,8 @@ export default function ContactSection() {
       className="mt-s10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 roundexd-2xl bg-gradient-to-r from-[#241918] via-[#16191d] to-[#131313] "
     >
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-white">Let’s Talk</h2>
-        <p className="text-white/70 mt-2">
+        <h2 className="text-4xl font-bold text-white font-poppins">Let’s Talk</h2>
+        <p className="text-white/70 mt-2 font-poppins">
           Chat with me through message box, email, phone or come to my office
         </p>
       </div>
@@ -46,10 +46,10 @@ export default function ContactSection() {
           onSubmit={handleSubmit}
           className="lg:col-span-2 bg-[#151a1f] border border-white/10 rounded-2xl p-8"
         >
-          <h3 className="text-3xl font-bold text-white mb-6">Get In Touch</h3>
+          <h3 className="text-3xl font-bold text-white mb-6 font-poppins">Get In Touch</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <label className="flex flex-col text-white/80">
+            <label className="flex flex-col text-white/80 font-poppins">
               Your Name
               <input
                 value={form.name}
@@ -58,7 +58,7 @@ export default function ContactSection() {
                 placeholder="Your Name"
               />
             </label>
-            <label className="flex flex-col text-white/80">
+            <label className="flex flex-col text-white/80 font-poppins">
               Your Email
               <input
                 value={form.email}
@@ -70,7 +70,7 @@ export default function ContactSection() {
           </div>
 
           <div className="mt-6">
-            <label className="flex flex-col text-white/80">
+            <label className="flex flex-col text-white/80 font-poppins">
               Your Phone
               <input
                 value={form.phone}
@@ -82,7 +82,7 @@ export default function ContactSection() {
           </div>
 
           <div className="mt-6">
-            <label className="flex flex-col text-white/80">
+            <label className="flex flex-col text-white/80 font-poppins">
               Choose a Service
               <select
                 value={form.service}
@@ -102,7 +102,7 @@ export default function ContactSection() {
           </div>
 
           <div className="mt-6">
-            <label className="flex flex-col text-white/80">
+            <label className="flex flex-col text-white/80 font-poppins">
               Message
               <textarea
                 value={form.message}
@@ -116,7 +116,7 @@ export default function ContactSection() {
 
           <button
             type="submit"
-            className="mt-8 px-8 py-3 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full font-semibold transition"
+            className="mt-8 px-8 py-3 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full font-semibold transition font-poppins"
           >
             Submit Now →
           </button>
@@ -127,8 +127,8 @@ export default function ContactSection() {
               📍
             </div>
             <div>
-              <p className="text-white">Ruyenzi, Kamonyi, Rwanda</p>
-              <p className="text-white/70 text-sm">Office Address</p>
+              <p className="text-white font-poppins">Ruyenzi, Kamonyi, Rwanda</p>
+              <p className="text-white/70 text-sm font-poppins">Office Address</p>
             </div>
           </div>
 
@@ -137,8 +137,8 @@ export default function ContactSection() {
               ✉️
             </div>
             <div>
-              <p className="text-white">amutuyimana64@gmail.com</p>
-              <p className="text-white/70 text-sm">Office Mail</p>
+              <p className="text-white font-poppins">amutuyimana64@gmail.com</p>
+              <p className="text-white/70 text-sm font-poppins">Office Mail</p>
             </div>
           </div>
 
@@ -147,8 +147,8 @@ export default function ContactSection() {
               📞
             </div>
             <div>
-              <p className="text-white">+250782099213</p>
-              <p className="text-white/70 text-sm">Office Phone</p>
+              <p className="text-white font-poppins">+250782099213</p>
+              <p className="text-white/70 text-sm font-poppins">Office Phone</p>
             </div>
           </div>
         </div>
