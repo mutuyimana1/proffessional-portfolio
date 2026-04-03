@@ -5,21 +5,20 @@ import ServicesTabs from "@/components/ServicesTabs";
 import WorkExperienceSection from "@/components/WorkExperienceSection";
 import RecentWorkSection from "@/components/RecentWorkSection";
 import ContactSection from "@/components/ContactSection";
-import CTASection from "@/components/CTASection";
 import LatestNewsSection from "@/components/LatestNewsSection";
 import FooterSection from "@/components/FooterSection";
 
 export default function Index() {
   return (
     <div
-      className="min-h-screen flex flex-col px-64 py-12"
+      className="min-h-screen flex flex-col  py-8 md:py-12 mx-auto w-full"
       style={{
         background:
           "linear-gradient(90deg, #3B1B1E 18.39%, #3A2618 28.91%, #302D25 51.92%, #1F393F 86.91%)",
       }}
     >
       <Navbar />
-      <section id="home">
+      <section id="home" className="px-4 md:px-8 lg:px-20 xl:px-44">
         <HeroSection />
       </section>
       <section id="about">
@@ -37,7 +36,6 @@ export default function Index() {
       <section id="contact">
         <ContactSection />
       </section>
-      <CTASection />
       <section id="blog">
         <LatestNewsSection />
       </section>

@@ -31,7 +31,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="mt-10 p-8 rounded-2xl bg-gradient-to-r from-[#0f1113] via-[#16191d] to-[#0b0f12] shadow-2xl border border-white/10"
+      className="mt-s10 p-8 roundexd-2xl bg-gradient-to-r from-[#241918] via-[#16191d] to-[#131313] "
     >
       <div className="text-center mb-10">
         <h2 className="text-4xl font-bold text-white">Let’s Talk</h2>
@@ -40,7 +40,8 @@ export default function ContactSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+        {" "}
         <form
           onSubmit={handleSubmit}
           className="lg:col-span-2 bg-[#151a1f] border border-white/10 rounded-2xl p-8"
@@ -120,7 +121,6 @@ export default function ContactSection() {
             Submit Now →
           </button>
         </form>
-
         <div className="space-y-4">
           <div className="p-6 rounded-2xl bg-[#1a2127] border border-white/10 flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-yellow-300">

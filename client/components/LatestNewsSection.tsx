@@ -24,7 +24,7 @@ const newsItems = [
 
 export default function LatestNewsSection() {
   return (
-    <section className="mt-10 p-8 rounded-2xl bg-gradient-to-r from-[#292a29] via-[#1a1b1c] to-[#101214] shadow-2xl border border-white/10">
+    <section className="mtx-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 bg-gradient-to-r from-[#292a29] via-[#1a1b1c] to-[#101214]">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-white">
           Latest News
@@ -34,7 +34,7 @@ export default function LatestNewsSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
         {newsItems.map((item) => (
           <article
             key={item.date}

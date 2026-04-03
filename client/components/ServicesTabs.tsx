@@ -77,7 +77,7 @@ export default function ServicesTabs() {
   const [activeTab, setActiveTab] = useState<string>("Design");
 
   return (
-    <section className="mt-10 p-8 rounded-2xl bg-gradient-to-r from-[#111827] via-[#1f2937] to-[#0f172a] shadow-2xl border border-white/10">
+    <section className="mtz-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 mrounded-2xl bg-gradient-to-r from-[#272620] via-[#1f2937] to-[#222121] ">
       <div className="mb-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white">
           Popular Services
@@ -105,11 +105,11 @@ export default function ServicesTabs() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
         {servicesData[activeTab].map((card) => (
           <article
             key={card.title}
-            className="group border border-white/20 rounded-2xl p-6 bg-black/30 hover:bg-black/50 transition-colors"
+            className="group border border-white/20 rounded-2xl p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors"
           >
             <div className="text-4xl mb-4">{card.icon}</div>
             <h3 className="text-2xl font-bold text-white mb-2">{card.title}</h3>

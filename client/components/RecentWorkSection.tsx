@@ -38,7 +38,7 @@ export default function RecentWorkSection() {
   const selectedItem = recentWorkItems[index];
 
   return (
-    <section className="mt-10 p-8 rounded-2xl bg-gradient-to-r from-[#191e25] via-[#0f1218] to-[#141b25] shadow-2xl border border-white/10">
+    <section className="mts-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounxded-2xl bg-gradient-to-r from-[#212020] via-[#2C291E] to-[#36321C]">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-white">
           Recent Work.
@@ -49,7 +49,7 @@ export default function RecentWorkSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {recentWorkItems.map((item, i) => (
           <article
             key={item.title}

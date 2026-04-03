@@ -27,7 +27,7 @@ const experienceItems = [
 
 export default function WorkExperienceSection() {
   return (
-    <section className="mt-10 p-8 rounded-2xl bg-gradient-to-r from-[#111827] via-[#1f2937] to-[#0f172a] shadow-2xl border border-white/10">
+    <section className="mt-f10 p-6 sm:p-8 px-4 md:px-8 lg:px-20 xl:px-44 roundded-2xl bg-gradient-to-r from-[#291D1C] via-[#211B1B] to-[#191919]">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-white">
           My Work Experience
@@ -42,7 +42,7 @@ export default function WorkExperienceSection() {
         {experienceItems.map((item, index) => (
           <div
             key={`${item.company}-${index}`}
-            className="flex flex-col md:flex-row items-center justify-between bg-white/5 border border-white/15 rounded-xl p-5 gap-4 md:gap-6"
+            className="flex flex-col md:flex-row items-center justify-between bg-white/5 border border-white/15 rounded-xl p-4 sm:p-5 gap-4 md:gap-6"
           >
             <div className="text-3xl md:text-4xl font-black text-white min-w-[140px]">
               {item.date}
