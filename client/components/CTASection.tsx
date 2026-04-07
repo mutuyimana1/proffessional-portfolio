@@ -2,7 +2,6 @@ export default function CTASection() {
   return (
     <div className="px-6 md:px-10">
       <div className="bg-[#ff3b4a] rounded-2xl px-8 md:px-12 py-10 md:py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-        
         {/* TEXT */}
         <h2 className="text-white text-2xl md:text-4xl font-semibold leading-tight max-w-xl font-poppins">
           Send me a message <br />

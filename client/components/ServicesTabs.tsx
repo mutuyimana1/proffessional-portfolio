@@ -7,84 +7,84 @@ type ServiceCard = {
 };
 
 const servicesData: Record<string, ServiceCard[]> = {
-  Design: [
-    {
-      title: "Graphic Design",
-      description:
-        "Explain to you how all this mistaken idea of denouncing pleasure born and give you a complete account the system.",
-      icon: "🎨",
-    },
-    {
-      title: "Product Design",
-      description:
-        "A product-focused design process with strong UX mind and modern interface improvement.",
-      icon: "🖌️",
-    },
-    {
-      title: "Brand Identity",
-      description:
-        "Create a consistent brand identity across all visual touchpoints for memorable experiences.",
-      icon: "🌟",
-    },
-  ],
-
-  Development: [
+  Web: [
     {
       title: "Frontend Development",
       description:
-        "Build responsive user interfaces with React, Vite, and modern component systems.",
+        "Build responsive, accessible frontend experiences using React, Tailwind, and modern web practices.",
       icon: "💻",
     },
     {
-      title: "Backend Development",
+      title: "Responsive Interfaces",
       description:
-        "Build robust APIs and services with Node.js, Express, database integration, auth and security.",
-      icon: "🧩",
+        "Create polished interfaces that work smoothly on mobile, tablet, and desktop devices.",
+      icon: "📱",
     },
     {
-      title: "Full-stack Delivery",
+      title: "Performance Optimization",
       description:
-        "End-to-end web product development from MVP to production deployments.",
-      icon: "🚀",
+        "Improve load times and runtime performance so users enjoy fast and stable applications.",
+      icon: "⚡",
     },
   ],
 
-  Management: [
+  Backend: [
     {
-      title: "Project Management",
+      title: "API Development",
       description:
-        "Deliver projects on time with agile planning, roadmaps, and communication channels.",
+        "Design and build RESTful and GraphQL APIs with Node.js, Express, Django, and PostgreSQL.",
+      icon: "🧩",
+    },
+    {
+      title: "Database Design",
+      description:
+        "Model data for reliability and scale, with secure integration across services.",
+      icon: "🗄️",
+    },
+    {
+      title: "Cloud Integration",
+      description:
+        "Deploy services with cloud-ready patterns, monitoring, and deployment automation.",
+      icon: "☁️",
+    },
+  ],
+
+  Strategy: [
+    {
+      title: "Product Planning",
+      description:
+        "Turn product goals into delivery-ready technical plans and feature roadmaps.",
       icon: "📋",
     },
     {
-      title: "Team Coaching",
+      title: "Technical Consulting",
       description:
-        "Enable teams to deliver higher quality through better practices and engineering culture.",
-      icon: "🤝",
+        "Advise on architecture, stack decisions, and build processes for better outcomes.",
+      icon: "🧠",
     },
     {
-      title: "Stakeholder Support",
+      title: "Delivery Support",
       description:
-        "Maintain alignment with business goals and provide clear progress visibility.",
+        "Help teams ship features consistently while keeping quality, timelines, and feedback aligned.",
       icon: "🎯",
     },
   ],
 };
 
-const tabs = ["Design", "Development", "Management"];
+const tabs = ["Web", "Backend", "Strategy"];
 
 export default function ServicesTabs() {
-  const [activeTab, setActiveTab] = useState<string>("Design");
+  const [activeTab, setActiveTab] = useState<string>("Web");
 
   return (
     <section className="mtz-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 mrounded-2xl bg-gradient-to-r from-[#272620] via-[#1f2937] to-[#222121] ">
       <div className="mb-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white font-poppins">
-          Popular Services
+          Core Services
         </h2>
         <p className="mt-3 text-white/70 max-w-2xl mx-auto font-poppins">
-          Must explain to you how all this mistaken idea of denouncing pleasure
-          born and give you a complete account the system.
+          I support delivery across web products, backend services, and product
+          strategy so your team can ship reliable solutions faster.
         </p>
       </div>
 
@@ -106,7 +106,7 @@ export default function ServicesTabs() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-        {servicesData[activeTab].map((card) => (
+        {servicesData[activeTab]?.map((card) => (
           <article
             key={card.title}
             className="group border border-white/20 rounded-2xl p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors"

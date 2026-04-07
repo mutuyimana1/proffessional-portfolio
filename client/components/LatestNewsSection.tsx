@@ -1,22 +1,22 @@
 const newsItems = [
   {
-    date: "13 Dec, 2021",
+    date: "13 Dec, 2025",
     title:
-      "Discover some of the interesting features that have landed in stable and beta web browsers during February 2021.",
+      "Released a new ticketing dashboard with real-time support analytics for Samphone Rwanda.",
     imageUrl:
       "https://images.unsplash.com/photo-1517430816045-df4b7de1bb23?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    date: "13 Dec, 2022",
+    date: "28 Feb, 2024",
     title:
-      "The Navigation API is now Baseline Newly available, providing a better way to handle navigation in single-page applications.",
+      "Delivered a finance and inventory module for a B2B ERP platform at TechVision LTD.",
     imageUrl:
       "https://images.unsplash.com/photo-1547658715-5b3a6dc8f31e?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    date: "13 Dec, 2023",
+    date: "05 Aug, 2023",
     title:
-      "Discover some of the interesting features that have landed in stable and beta web browsers during January 2026.",
+      "Hosted a web development workshop for young women and girls in Rwanda.",
     imageUrl:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
   },
@@ -27,10 +27,10 @@ export default function LatestNewsSection() {
     <section className="mtx-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 bg-gradient-to-r from-[#292a29] via-[#1a1b1c] to-[#101214]">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-white font-poppins">
-          Latest News
+          Latest Updates
         </h2>
         <p className="text-white/70 mt-2 font-poppins">
-          Check my latest activities and actions, click to view more details.
+          News from recent releases, workshops, and product launches.
         </p>
       </div>
 

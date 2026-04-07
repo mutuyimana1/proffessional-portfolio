@@ -12,22 +12,23 @@ export default function AboutSection() {
         </div>
 
         <div className="space-y-4">
-          <p className="text-white text-xl font-semibold font-poppins">My Advantage</p>
+          <p className="text-white text-xl font-semibold font-poppins">
+            What I bring
+          </p>
           <p className="text-white/70 font-poppins">
-            Must explain to you how all this mistaken idea of denouncing
-            pleasure and praising pain was born and I will give you a complete
-            account the system and expound the actual and praising pain was
-            born.
+            I’m a software developer focused on end-to-end web products, from
+            clean interfaces to backend services. I work with teams to make
+            products faster, more reliable, and easier to scale.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              ["Figma", "text-white"],
-              ["UI/UX", "text-emerald-300"],
-              ["Frontend", "text-rose-300"],
-              ["Backend", "text-amber-300"],
-              ["Product Design", "text-cyan-300"],
-              ["Project Management", "text-violet-300"],
+              ["React & UI", "text-white"],
+              ["Backend APIs", "text-emerald-300"],
+              ["Cloud Services", "text-rose-300"],
+              ["Data Integration", "text-amber-300"],
+              ["Automation", "text-cyan-300"],
+              ["Team Collaboration", "text-violet-300"],
             ].map(([label, color]) => (
               <div
                 key={label}

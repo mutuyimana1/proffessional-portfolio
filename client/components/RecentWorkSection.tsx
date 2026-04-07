@@ -41,11 +41,11 @@ export default function RecentWorkSection() {
     <section className="mts-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounxded-2xl bg-gradient-to-r from-[#212020] via-[#2C291E] to-[#36321C]">
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-white font-poppins">
-          Recent Work.
+          Recent Projects
         </h2>
         <p className="mt-3 text-white/70 max-w-2xl mx-auto font-poppins">
-          Must explain to you how all this mistaken idea pleasure born and give
-          you a complete account.
+          Recent work I delivered for operations, education, and customer-facing
+          platforms.
         </p>
       </div>
 
@@ -62,8 +62,12 @@ export default function RecentWorkSection() {
               style={{ backgroundImage: `url(${item.imageUrl})` }}
             />
             <div className="p-5 bg-black/40">
-              <h3 className="text-xl font-semibold text-white font-poppins">{item.title}</h3>
-              <p className="mt-2 text-sm text-white/70 font-poppins">{item.description}</p>
+              <h3 className="text-xl font-semibold text-white font-poppins">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm text-white/70 font-poppins">
+                {item.description}
+              </p>
             </div>
           </article>
         ))}
