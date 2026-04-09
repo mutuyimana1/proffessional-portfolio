@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+
 export default function AboutSection() {
   return (
-    <section className="mt-14 p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounded-2xxl bg-gradient-to-r from-[#191919] via-[#191919] to-[#1f1822] ">
+    <motion.section 
+      className="mt-14 p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounded-2xxl bg-gradient-to-r from-[#191919] via-[#191919] to-[#1f1822]"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="rounded-xl border border-white/10 p-8 bg-white/5 backdrop-blur-sm">
           <h2 className="text-7xl font-black text-yellow-300">04</h2>
@@ -41,6 +49,6 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+
 export default function CTASection() {
   return (
-    <div className="px-6 md:px-10">
+    <motion.div 
+      className="px-6 md:px-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="bg-[#ff3b4a] rounded-2xl px-8 md:px-12 py-10 md:py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
         {/* TEXT */}
         <h2 className="text-white text-2xl md:text-4xl font-semibold leading-tight max-w-xl font-poppins">
@@ -17,6 +25,6 @@ export default function CTASection() {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

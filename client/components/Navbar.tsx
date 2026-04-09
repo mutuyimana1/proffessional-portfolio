@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -69,7 +70,13 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full px-10 md:px-10 2xl:px-64 py-4 flex items-center justify-between relative z-50">
+    <motion.nav 
+      className="w-full px-10 md:px-10 2xl:px-64 py-4 flex items-center justify-between relative z-50"
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       {/* Logo */}
       <Link
         to="#home"
@@ -164,6 +171,6 @@ export default function Navbar() {
           </button>
         </div>
       )}
-    </nav>
+    </motion.nav>
   );
 }

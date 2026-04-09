@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+
 export default function FooterSection() {
   return (
-    <div className="mt-10 space-y-6">
+    <motion.div 
+      className="mt-10 space-y-6"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       {/* 🔴 CTA SECTION */}
       <div className="bg-[#ff3b4a] text-white rounded-2xl  px-4 md:px-8 lg:px-20 xl:px-44 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <h2 className="text-2xl md:text-3xl font-semibold max-w-xl leading-snug font-poppins">
@@ -105,6 +113,6 @@ export default function FooterSection() {
           </div>
         </div>
       </footer>
-    </div>
+    </motion.div>
   );
 }

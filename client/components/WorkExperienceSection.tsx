@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const experienceItems = [
   {
     date: "2023–2025",
@@ -35,7 +37,13 @@ const experienceItems = [
 
 export default function WorkExperienceSection() {
   return (
-    <section className="mt-f10 p-6 sm:p-8 px-4 md:px-8 lg:px-20 xl:px-44 roundded-2xl bg-gradient-to-r from-[#291D1C] via-[#211B1B] to-[#191919]">
+    <motion.section 
+      className="mt-f10 p-6 sm:p-8 px-4 md:px-8 lg:px-20 xl:px-44 roundded-2xl bg-gradient-to-r from-[#291D1C] via-[#211B1B] to-[#191919]"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-white font-poppins">
           Work Experience
@@ -80,6 +88,6 @@ export default function WorkExperienceSection() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

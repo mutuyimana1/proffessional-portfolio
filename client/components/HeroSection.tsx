@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 // Tech icon wrapper card component
 function IconCard({
   children,
@@ -155,7 +157,13 @@ function NestIcon() {
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 px-6 md:px-10 lg:px-16 py-12 lg:py-16 flex-1">
+    <motion.section 
+      className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 px-6 md:px-10 lg:px-16 py-12 lg:py-16 flex-1"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       {/* Left Content */}
       <div className="flex flex-col gap-5 lg:gap-6 max-w-xl w-full order-2 lg:order-1">
         <p className="text-white font-poppins text-xl md:text-2xl font-semibold">
@@ -228,77 +236,89 @@ export default function HeroSection() {
 
         {/* Floating tech icons */}
         {/* React - top center */}
-        <div
+        <motion.div
           className="absolute flex items-center justify-center"
           style={{ top: "-2%", left: "50%", transform: "translateX(-50%)" }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         >
           <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-[#D9D9D9] shadow-lg">
             <div className="flex items-center justify-center w-12 h-10 md:w-16 md:h-12 rounded-xl md:rounded-2xl bg-[#242938] overflow-hidden">
               <ReactIcon />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Node.js - left middle */}
-        <div
+        <motion.div
           className="absolute flex items-center justify-center"
           style={{ left: "-6%", top: "38%" }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         >
           <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-[#D9D9D9] shadow-lg">
             <div className="flex items-center justify-center w-12 h-10 md:w-16 md:h-12 rounded-xl md:rounded-2xl bg-black overflow-hidden">
               <NodeIcon />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Next.js - right upper */}
-        <div
+        <motion.div
           className="absolute flex items-center justify-center"
           style={{ right: "-8%", top: "28%" }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         >
           <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-[#D9D9D9] shadow-lg">
             <div className="flex items-center justify-center w-12 h-10 md:w-16 md:h-12 rounded-xl md:rounded-2xl bg-black overflow-hidden px-1">
               <NextjsIcon />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Java - bottom left */}
-        <div
+        <motion.div
           className="absolute flex items-center justify-center"
           style={{ left: "2%", bottom: "6%" }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         >
           <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-[#D9D9D9] shadow-lg">
             <div className="flex items-center justify-center w-12 h-10 md:w-16 md:h-12 rounded-xl md:rounded-2xl bg-[#242938] overflow-hidden">
               <JavaIcon />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Django - bottom right */}
-        <div
+        <motion.div
           className="absolute flex items-center justify-center"
           style={{ right: "2%", bottom: "6%" }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         >
           <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-[#D9D9D9] shadow-lg">
             <div className="flex items-center justify-center w-12 h-10 md:w-16 md:h-12 rounded-xl md:rounded-2xl bg-[#092E20] overflow-hidden">
               <DjangoIcon />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* NestJS - bottom center */}
-        <div
+        <motion.div
           className="absolute flex items-center justify-center"
           style={{ bottom: "-4%", left: "50%", transform: "translateX(-50%)" }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         >
           <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-[#D9D9D9] shadow-lg">
             <div className="flex items-center justify-center w-12 h-10 md:w-16 md:h-12 rounded-xl md:rounded-2xl bg-[#E0234E] overflow-hidden">
               <NestIcon />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 type ServiceCard = {
   title: string;
@@ -77,7 +78,13 @@ export default function ServicesTabs() {
   const [activeTab, setActiveTab] = useState<string>("Web");
 
   return (
-    <section className="mtz-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 mrounded-2xl bg-gradient-to-r from-[#272620] via-[#1f2937] to-[#222121] ">
+    <motion.section 
+      className="mtz-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 mrounded-2xl bg-gradient-to-r from-[#272620] via-[#1f2937] to-[#222121]"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="mb-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white font-poppins">
           Core Services
@@ -120,6 +127,6 @@ export default function ServicesTabs() {
           </article>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

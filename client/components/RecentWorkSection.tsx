@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const recentWorkItems = [
   {
@@ -38,7 +39,13 @@ export default function RecentWorkSection() {
   const selectedItem = recentWorkItems[index];
 
   return (
-    <section className="mts-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounxded-2xl bg-gradient-to-r from-[#212020] via-[#2C291E] to-[#36321C]">
+    <motion.section 
+      className="mts-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounxded-2xl bg-gradient-to-r from-[#212020] via-[#2C291E] to-[#36321C]"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-white font-poppins">
           Recent Projects
@@ -89,6 +96,6 @@ export default function RecentWorkSection() {
           &#8594;
         </button>
       </div>
-    </section>
+    </motion.section>
   );
 }
