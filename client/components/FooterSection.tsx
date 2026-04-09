@@ -102,10 +102,6 @@ export default function FooterSection() {
                 className="flex-1 bg-transparent outline-none text-sm text-white placeholder:text-white/40 font-poppins"
                 placeholder="Enter your email"
               />
-              <input
-                className="flex-1 bg-transparent outline-none text-sm text-white placeholder:text-white/40 font-poppins"
-                placeholder="Email address *"
-              />
               <button className="ml-2 w-9 h-9 flex items-center justify-center rounded-md bg-white/10 hover:bg-white/20 transition">
                 ✉️
               </button>
