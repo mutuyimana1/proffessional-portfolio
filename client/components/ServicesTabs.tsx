@@ -78,7 +78,7 @@ export default function ServicesTabs() {
   const [activeTab, setActiveTab] = useState<string>("Web");
 
   return (
-    <motion.section 
+    <motion.section
       className="mtz-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 mrounded-2xl bg-gradient-to-r from-[#272620] via-[#1f2937] to-[#222121]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

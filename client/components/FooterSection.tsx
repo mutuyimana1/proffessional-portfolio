@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function FooterSection() {
   return (
-    <motion.div 
+    <motion.div
       className="mt-10 space-y-6"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

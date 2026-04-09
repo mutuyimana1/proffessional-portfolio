@@ -39,7 +39,7 @@ export default function RecentWorkSection() {
   const selectedItem = recentWorkItems[index];
 
   return (
-    <motion.section 
+    <motion.section
       className="mts-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounxded-2xl bg-gradient-to-r from-[#212020] via-[#2C291E] to-[#36321C]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

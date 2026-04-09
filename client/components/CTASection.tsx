@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function CTASection() {
   return (
-    <motion.div 
+    <motion.div
       className="px-6 md:px-10"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

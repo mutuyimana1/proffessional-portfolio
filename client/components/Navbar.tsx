@@ -70,7 +70,7 @@ export default function Navbar() {
   };
 
   return (
-    <motion.nav 
+    <motion.nav
       className="w-full px-10 md:px-10 2xl:px-64 py-4 flex items-center justify-between relative z-50"
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}

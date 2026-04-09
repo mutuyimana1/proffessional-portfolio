@@ -26,7 +26,7 @@ import { motion } from "framer-motion";
 
 export default function LatestNewsSection() {
   return (
-    <motion.section 
+    <motion.section
       className="mtx-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 bg-gradient-to-r from-[#292a29] via-[#1a1b1c] to-[#101214]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

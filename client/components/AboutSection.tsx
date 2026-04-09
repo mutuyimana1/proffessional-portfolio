@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <motion.section 
+    <motion.section
       className="mt-14 p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounded-2xxl bg-gradient-to-r from-[#191919] via-[#191919] to-[#1f1822]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

@@ -157,7 +157,7 @@ function NestIcon() {
 
 export default function HeroSection() {
   return (
-    <motion.section 
+    <motion.section
       className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 px-6 md:px-10 lg:px-16 py-12 lg:py-16 flex-1"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
