@@ -9,7 +9,7 @@ const newsItems = [
   {
     date: "28 Feb, 2024",
     title:
-      "Delivered a finance and inventory module for a B2B ERP platform at TechVision LTD.",
+      "Delivered a finance and inventory module for a B2B ERP platform at Igire Rwanda.",
     imageUrl:
       "https://images.unsplash.com/photo-1547658715-5b3a6dc8f31e?auto=format&fit=crop&w=1200&q=80",
   },

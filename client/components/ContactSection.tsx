@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 const services = [
   "Web Design",
@@ -132,8 +133,8 @@ export default function ContactSection() {
         </form>
         <div className="space-y-4">
           <div className="p-6 rounded-2xl bg-[#1a2127] border border-white/10 flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-yellow-300">
-              📍
+            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white">
+              <MapPin size={20} />
             </div>
             <div>
               <p className="text-white font-poppins">
@@ -146,8 +147,8 @@ export default function ContactSection() {
           </div>
 
           <div className="p-6 rounded-2xl bg-[#1a2127] border border-white/10 flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-yellow-300">
-              ✉️
+            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white">
+              <Mail size={20} />
             </div>
             <div>
               <p className="text-white font-poppins">amutuyimana64@gmail.com</p>
@@ -156,8 +157,8 @@ export default function ContactSection() {
           </div>
 
           <div className="p-6 rounded-2xl bg-[#1a2127] border border-white/10 flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-yellow-300">
-              📞
+            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white">
+              <Phone size={20} />
             </div>
             <div>
               <p className="text-white font-poppins">+250782099213</p>

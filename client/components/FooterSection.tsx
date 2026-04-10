@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Mail, Facebook, Linkedin, X } from "lucide-react";
 
 export default function FooterSection() {
   return (
@@ -42,13 +43,18 @@ export default function FooterSection() {
               tools for teams in Rwanda and beyond.
             </p>
 
-            <div className="flex items-center gap-3 mt-6 text-white/70">
-              {["✉️", "f", "in", "×"].map((icon, i) => (
+            <div className="flex items-center gap-3 mt-6 text-white">
+              {[
+                { icon: Mail, size: 16 },
+                { icon: Facebook, size: 16 },
+                { icon: Linkedin, size: 16 },
+                { icon: X, size: 16 },
+              ].map(({ icon: Icon, size }, i) => (
                 <span
                   key={i}
-                  className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 transition cursor-pointer text-sm"
+                  className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 transition cursor-pointer"
                 >
-                  {icon}
+                  <Icon size={size} />
                 </span>
               ))}
             </div>
@@ -103,7 +109,7 @@ export default function FooterSection() {
                 placeholder="Enter your email"
               />
               <button className="ml-2 w-9 h-9 flex items-center justify-center rounded-md bg-white/10 hover:bg-white/20 transition">
-                ✉️
+                <Mail size={16} className="text-white" />
               </button>
             </div>
           </div>

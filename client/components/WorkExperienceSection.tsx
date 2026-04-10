@@ -12,7 +12,7 @@ const experienceItems = [
   {
     date: "2021–2023",
     title: "Full-stack Engineer",
-    company: "TechVision LTD",
+    company: "Igire Rwanda",
     website: "https://techvision.rw",
     summary:
       "Built ERP modules and integrated payment workflows with Node.js and PostgreSQL.",

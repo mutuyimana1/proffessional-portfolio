@@ -1,10 +1,21 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import {
+  Monitor,
+  Smartphone,
+  Zap,
+  Puzzle,
+  Database,
+  Cloud,
+  ClipboardList,
+  Brain,
+  Target,
+} from "lucide-react";
 
 type ServiceCard = {
   title: string;
   description: string;
-  icon: string;
+  icon: React.ComponentType<{ size?: number }>;
 };
 
 const servicesData: Record<string, ServiceCard[]> = {
@@ -13,19 +24,19 @@ const servicesData: Record<string, ServiceCard[]> = {
       title: "Frontend Development",
       description:
         "Build responsive, accessible frontend experiences using React, Tailwind, and modern web practices.",
-      icon: "💻",
+      icon: Monitor,
     },
     {
       title: "Responsive Interfaces",
       description:
         "Create polished interfaces that work smoothly on mobile, tablet, and desktop devices.",
-      icon: "📱",
+      icon: Smartphone,
     },
     {
       title: "Performance Optimization",
       description:
         "Improve load times and runtime performance so users enjoy fast and stable applications.",
-      icon: "⚡",
+      icon: Zap,
     },
   ],
 
@@ -34,19 +45,19 @@ const servicesData: Record<string, ServiceCard[]> = {
       title: "API Development",
       description:
         "Design and build RESTful and GraphQL APIs with Node.js, Express, Django, and PostgreSQL.",
-      icon: "🧩",
+      icon: Puzzle,
     },
     {
       title: "Database Design",
       description:
         "Model data for reliability and scale, with secure integration across services.",
-      icon: "🗄️",
+      icon: Database,
     },
     {
       title: "Cloud Integration",
       description:
         "Deploy services with cloud-ready patterns, monitoring, and deployment automation.",
-      icon: "☁️",
+      icon: Cloud,
     },
   ],
 
@@ -55,19 +66,19 @@ const servicesData: Record<string, ServiceCard[]> = {
       title: "Product Planning",
       description:
         "Turn product goals into delivery-ready technical plans and feature roadmaps.",
-      icon: "📋",
+      icon: ClipboardList,
     },
     {
       title: "Technical Consulting",
       description:
         "Advise on architecture, stack decisions, and build processes for better outcomes.",
-      icon: "🧠",
+      icon: Brain,
     },
     {
       title: "Delivery Support",
       description:
         "Help teams ship features consistently while keeping quality, timelines, and feedback aligned.",
-      icon: "🎯",
+      icon: Target,
     },
   ],
 };
@@ -118,7 +129,9 @@ export default function ServicesTabs() {
             key={card.title}
             className="group border border-white/20 rounded-2xl p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors"
           >
-            <div className="text-4xl mb-4">{card.icon}</div>
+            <div className="text-4xl mb-4">
+              <card.icon size={40} className="text-white" />
+            </div>
             <h3 className="text-2xl font-bold text-white mb-2">{card.title}</h3>
             <p className="text-white/70 font-poppins">{card.description}</p>
             <div className="mt-4 font-semibold text-yellow-300 font-poppins">
