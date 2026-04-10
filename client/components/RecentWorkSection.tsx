@@ -1,25 +1,28 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const recentWorkItems = [
   {
-    title: "Advanced Ticket Management System",
+    title: "House Design Generator",
     description:
-      "Advanced Ticket Management System designed to streamline and automate the lifecycle of tracking, managing, and resolving support requests or incidents within an organization.",
+      "Advanced AI-powered house design generator allowing users to create custom architectural designs by specifying preferences like style, room count, and area. Create beautiful homes tailored to your needs.",
     imageUrl:
-      "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80",
-    visitUrl: "#",
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind"],
+      "https://images.unsplash.com/photo-1582073566048-8c5a27da55d8?auto=format&fit=crop&w=1200&q=80",
+    visitUrl: "/house-design-generator",
+    isInternal: true,
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
   },
   {
-    title: "Comprehensive ERP system",
+    title: "Latest Designs Showcase",
     description:
-      "Comprehensive ERP system aimed at improving business operations by facilitating purchase and sales management, inventory control, finance operations, repairs, B2B transactions, and customer management.",
+      "Browse and explore the latest house designs created by our community. View featured designs, architectural styles, room configurations, and get inspired by stunning creations.",
     imageUrl:
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
-    visitUrl: "#",
-    technologies: ["React", "Express", "MySQL", "Redux", "Material-UI"],
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80",
+    visitUrl: "/latest-designs",
+    isInternal: true,
+    technologies: ["React", "React Router", "Responsive Design", "Motion"],
   },
   {
     title: "Advanced computer programming coding Bootcamp [STEM]",
@@ -28,11 +31,13 @@ const recentWorkItems = [
     imageUrl:
       "https://images.unsplash.com/photo-1590647190717-d4b5fa6013f3?auto=format&fit=crop&w=1200&q=80",
     visitUrl: "#",
+    isInternal: false,
     technologies: ["Next.js", "Python", "Django", "Firebase", "Figma"],
   },
 ];
 
 export default function RecentWorkSection() {
+  const navigate = useNavigate();
   const [index, setIndex] = useState(0);
 
   function onPrev() {
@@ -96,15 +101,25 @@ export default function RecentWorkSection() {
               </div>
 
               {/* Visit Link */}
-              <a
-                href={item.visitUrl}
-                // target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-green-400 transition-colors"
-              >
-                Visit Project
-                <ExternalLink size={16} />
-              </a>
+              {item.isInternal ? (
+                <button
+                  // onClick={() => navigate(item.visitUrl)}
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-green-400 transition-colors"
+                >
+                  Visit Project
+                  <ExternalLink size={16} />
+                </button>
+              ) : (
+                <a
+                  href={item.visitUrl}
+                  // target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-green-400 transition-colors"
+                >
+                  Visit Project
+                  <ExternalLink size={16} />
+                </a>
+              )}
             </div>
           </article>
         ))}
