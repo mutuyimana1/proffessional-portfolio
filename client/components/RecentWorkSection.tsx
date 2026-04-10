@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 
 const recentWorkItems = [
   {
@@ -8,6 +9,8 @@ const recentWorkItems = [
       "Advanced Ticket Management System designed to streamline and automate the lifecycle of tracking, managing, and resolving support requests or incidents within an organization.",
     imageUrl:
       "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80",
+    visitUrl: "#",
+    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind"],
   },
   {
     title: "Comprehensive ERP system",
@@ -15,6 +18,8 @@ const recentWorkItems = [
       "Comprehensive ERP system aimed at improving business operations by facilitating purchase and sales management, inventory control, finance operations, repairs, B2B transactions, and customer management.",
     imageUrl:
       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+    visitUrl: "#",
+    technologies: ["React", "Express", "MySQL", "Redux", "Material-UI"],
   },
   {
     title: "Advanced computer programming coding Bootcamp [STEM]",
@@ -22,6 +27,8 @@ const recentWorkItems = [
       "Advanced computer programming coding Bootcamp[STEM] for young women and girls in Rwanda.",
     imageUrl:
       "https://images.unsplash.com/photo-1590647190717-d4b5fa6013f3?auto=format&fit=crop&w=1200&q=80",
+    visitUrl: "#",
+    technologies: ["Next.js", "Python", "Django", "Firebase", "Figma"],
   },
 ];
 
@@ -75,6 +82,29 @@ export default function RecentWorkSection() {
               <p className="mt-2 text-sm text-white/70 font-poppins">
                 {item.description}
               </p>
+
+              {/* Technology Stack */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {item.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="inline-block text-xs px-2 py-1 rounded-full bg-white/10 text-white/80 border border-white/20"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Visit Link */}
+              <a
+                href={item.visitUrl}
+                // target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-green-400 transition-colors"
+              >
+                Visit Project
+                <ExternalLink size={16} />
+              </a>
             </div>
           </article>
         ))}
