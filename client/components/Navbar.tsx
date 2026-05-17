@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
@@ -15,6 +14,15 @@ const navLinks = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("Home");
+
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/Alice MUTUYIMANA_CV.pdf';
+    link.download = 'Alice MUTUYIMANA_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   useEffect(() => {
     let ticking = false;
@@ -113,10 +121,13 @@ export default function Navbar() {
         ))}
       </ul>
 
-      {/* Resume Button */}
-      <button className="hidden md:block bg-brand-green text-white font-poppins text-base lg:text-lg font-normal px-7 py-3 rounded-full hover:bg-green-600 transition-colors shrink-0">
-        Resume
-      </button>
+{/* Resume Button */}
+       <button
+         className="hidden md:block bg-brand-green text-white font-poppins text-base lg:text-lg font-normal px-7 py-3 rounded-full hover:bg-green-600 transition-colors shrink-0"
+         onClick={handleDownloadResume}
+       >
+         Resume
+       </button>
 
       {/* Mobile Hamburger */}
       <button
@@ -166,9 +177,15 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <button className="bg-brand-green text-white font-poppins text-base font-normal px-7 py-3 rounded-full hover:bg-green-600 transition-colors mt-2">
-            Resume
-          </button>
+<button
+             className="bg-brand-green text-white font-poppins text-base font-normal px-7 py-3 rounded-full hover:bg-green-600 transition-colors mt-2"
+             onClick={() => {
+               handleDownloadResume();
+               setMobileOpen(false);
+             }}
+           >
+             Resume
+           </button>
         </div>
       )}
     </motion.nav>

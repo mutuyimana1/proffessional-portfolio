@@ -55,7 +55,7 @@ export default function ContactSection() {
           className="lg:col-span-2 bg-[#151a1f] border border-white/10 rounded-2xl p-8"
         >
           <h3 className="text-3xl font-bold text-white mb-6 font-poppins">
-            Get In Touch
+            Get In Touch <span className="text-red-300 text-base pl-12"> coming soon.....</span>
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -65,7 +65,7 @@ export default function ContactSection() {
                 value={form.name}
                 onChange={(e) => handleChange("name", e.target.value)}
                 className="mt-2 bg-transparent border-b border-white/30 focus:border-emerald-400 outline-none text-white py-2"
-                placeholder="Your Name"
+                // placeholder="Your Name"
               />
             </label>
             <label className="flex flex-col text-white/80 font-poppins">
@@ -74,7 +74,7 @@ export default function ContactSection() {
                 value={form.email}
                 onChange={(e) => handleChange("email", e.target.value)}
                 className="mt-2 bg-transparent border-b border-white/30 focus:border-emerald-400 outline-none text-white py-2"
-                placeholder="Your Email"
+                // placeholder="Your Email"
               />
             </label>
           </div>
@@ -86,14 +86,12 @@ export default function ContactSection() {
                 value={form.phone}
                 onChange={(e) => handleChange("phone", e.target.value)}
                 className="mt-2 bg-transparent border-b border-white/30 focus:border-emerald-400 outline-none text-white py-2"
-                placeholder="Your Phone"
+                // placeholder="Your Phone"
               />
             </label>
           </div>
 
-          <div className="mt-6">
-            <label className="flex flex-col text-white/80 font-poppins">
-              Choose a Service
+          <div className="mt-6 flex flex-col text-white/80 font-poppins">
               <select
                 value={form.service}
                 onChange={(e) => handleChange("service", e.target.value)}
@@ -103,12 +101,11 @@ export default function ContactSection() {
                   Choose a Service
                 </option>
                 {services.map((item) => (
-                  <option key={item} value={item}>
+                  <option key={item} value={item} className="text-black">
                     {item}
                   </option>
                 ))}
               </select>
-            </label>
           </div>
 
           <div className="mt-6">
@@ -119,13 +116,14 @@ export default function ContactSection() {
                 onChange={(e) => handleChange("message", e.target.value)}
                 rows={4}
                 className="mt-2 bg-transparent border-b border-white/30 focus:border-emerald-400 outline-none text-white py-2"
-                placeholder="Message"
+                // placeholder="Message"
               />
             </label>
           </div>
 
           <button
             type="submit"
+            disabled
             className="mt-8 px-8 py-3 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full font-semibold transition font-poppins"
           >
             Submit Now →

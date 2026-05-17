@@ -1,44 +1,45 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const experienceItems = [
   {
-    date: "2023–2025",
-    title: "Frontend Developer",
-    company: "Samphone Rwanda",
-    website: "https://samphone.rw",
+    date: "07/2023 – 01/2026",
+    title: "Software Engineer",
+    company: "Samphone",
+    website: "https://force.samphone.co/",
     summary:
-      "Led the redesign and implementation of a customer portal using React and Tailwind.",
+      "Developed and maintained ERP & CRM systems, backend APIs, and mobile applications using Node.js, TypeScript, React Native, and Angular. Integrated RRA and MoMo services while improving system performance and operational efficiency.",
   },
   {
-    date: "2021–2023",
-    title: "Full-stack Engineer",
-    company: "Igire Rwanda",
-    website: "https://techvision.rw",
+    date: "01/2024 – 08/2025",
+    title: "Mobile Developer",
+    company: "Outa",
+    website: "#",
     summary:
-      "Built ERP modules and integrated payment workflows with Node.js and PostgreSQL.",
+      "Built scalable web and mobile applications with React Native, React.js, and Node.js. Integrated REST APIs, authentication systems, and real-time features while optimizing application stability and user experience.",
   },
   {
-    date: "2019–2021",
-    title: "UI/UX Developer",
-    company: "DesignHive",
-    website: "https://designhive.rw",
+    date: "01/2024 – 04/2025",
+    title: "Software Engineer",
+    company: "TechVilla",
+    website: "#",
     summary:
-      "Designed interfaces and interaction flows for web applications and client products.",
+      "Developed frontend applications and REST APIs for scalable systems, ensuring seamless integration between frontend and backend services while collaborating in agile development environments.",
   },
   {
-    date: "2017–2019",
-    title: "Intern Developer",
-    company: "CreateLab",
-    website: "https://createlab.rw",
+    date: "04/2022 – 07/2023",
+    title: "Technical Facilitator (Software Engineering)",
+    company: "Igire Rwanda Organization",
+    website: "https://igirerwanda.org",
     summary:
-      "Supported client websites, internal tools, and automation projects for small teams.",
+      "Trained and mentored students in full-stack and mobile development using Node.js, React.js, Angular, React Native, and Figma while guiding real-world software projects from planning to deployment.",
   },
 ];
 
 export default function WorkExperienceSection() {
   return (
     <motion.section
-      className="mt-f10 p-6 sm:p-8 px-4 md:px-8 lg:px-20 xl:px-44 roundded-2xl bg-gradient-to-r from-[#291D1C] via-[#211B1B] to-[#191919]"
+      className="mt-f10 p-6 sm:p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounded-2xl bg-gradient-to-r from-[#291D1C] via-[#211B1B] to-[#191919]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -48,43 +49,52 @@ export default function WorkExperienceSection() {
         <h2 className="text-3xl md:text-4xl font-bold text-white font-poppins">
           Work Experience
         </h2>
+
         <p className="mt-3 text-white/70 max-w-2xl mx-auto font-poppins">
-          Selected roles where I helped teams build web platforms, backend APIs,
-          and operational tools for business growth.
+          Full-stack software engineering experience building scalable web,
+          mobile, ERP, CRM, and enterprise systems with modern technologies and
+          integrations.
         </p>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-6">
         {experienceItems.map((item, index) => (
           <div
             key={`${item.company}-${index}`}
             className="flex flex-col md:flex-row items-center justify-between bg-white/5 border border-white/15 rounded-xl p-4 sm:p-5 gap-4 md:gap-6"
           >
-            <div className="text-3xl md:text-4xl font-black text-white min-w-[140px]">
+            <div className="text-lg font-black text-white min-w-[160px]">
               {item.date}
             </div>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-lg font-bold text-black">
-                S
-              </div>
+
+            <div className="flex items-start gap-10 flex-1">
+              {/* <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-lg font-bold text-black">
+                {item.company.charAt(0)}
+              </div> */}
+
               <div>
                 <div className="text-xl md:text-2xl font-semibold text-white font-poppins">
                   {item.title}
                 </div>
-                <div className="text-red-400 font-poppins">{item.company}</div>
-                <p className="text-sm text-white/70 mt-1 font-poppins">
+
+                <div className="text-red-400 font-poppins">
+                  {item.company}
+                </div>
+
+                <p className="text-sm text-white/70 mt-1 font-poppins leading-relaxed">
                   {item.summary}
                 </p>
               </div>
             </div>
-            <a
-              href="#"
+
+            {/* <Link
+              to={item.website}
               target="_blank"
               rel="noreferrer"
-              className="text-white font-semibold hover:text-yellow-300 flex items-center gap-2 font-poppins"
+              className="text-white font-semibold hover:text-yellow-300 flex items-center gap-2 font-poppins whitespace-nowrap"
             >
               <span>→</span> Visit website
-            </a>
+            </Link> */}
           </div>
         ))}
       </div>

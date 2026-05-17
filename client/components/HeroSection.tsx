@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Tech icon wrapper card component
 function IconCard({
@@ -170,15 +171,15 @@ export default function HeroSection() {
           I&nbsp; Am Alice MUTUYIMANA.
         </p>
         <p className="text-white font-poppins text-xl md:text-2xl font-semibold">
-          Software Developer
+          a Software Engineer
         </p>
         <p className="text-white font-poppins text-lg md:text-xl font-semibold leading-snug">
-          I build scalable web applications, craft responsive interfaces, and
-          <br className="hidden sm:block" /> deliver polished digital products.
+          I specialize in developing secure and high-performance applications and
+          <br className="hidden sm:block" /> delivering end-to-end software solutions that improve operational efficiency and user experience.
         </p>
         <div className="mt-4">
-          <a
-            href="#portfolio"
+          <Link
+            to="#portfolio"
             className="inline-flex items-center gap-3 bg-brand-green text-white font-poppins text-base font-normal px-6 py-3 rounded-full hover:bg-green-600 transition-colors"
           >
             View Portfolio
@@ -194,7 +195,7 @@ export default function HeroSection() {
                 stroke="white"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -278,7 +279,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Java - bottom left */}
-        <motion.div
+        {/* <motion.div
           className="absolute flex items-center justify-center"
           style={{ left: "2%", bottom: "6%" }}
           animate={{ rotate: 360 }}
@@ -289,10 +290,10 @@ export default function HeroSection() {
               <JavaIcon />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Django - bottom right */}
-        <motion.div
+        {/* <motion.div
           className="absolute flex items-center justify-center"
           style={{ right: "2%", bottom: "6%" }}
           animate={{ rotate: 360 }}
@@ -303,7 +304,7 @@ export default function HeroSection() {
               <DjangoIcon />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* NestJS - bottom center */}
         <motion.div
@@ -313,7 +314,7 @@ export default function HeroSection() {
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         >
           <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-[#D9D9D9] shadow-lg">
-            <div className="flex items-center justify-center w-12 h-10 md:w-16 md:h-12 rounded-xl md:rounded-2xl bg-[#E0234E] overflow-hidden">
+            <div className="flex items-center justify-center w-12 h-10 md:w-16 md:h-12 rounded-xl md:rounded-2xl bg-[#6d1428] overflow-hidden">
               <NestIcon />
             </div>
           </div>

@@ -11,7 +11,7 @@ export default function FooterSection() {
       viewport={{ once: true }}
     >
       {/* 🔴 CTA SECTION */}
-      <div className="bg-[#ff3b4a] text-white rounded-2xl  px-4 md:px-8 lg:px-20 xl:px-44 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      {/* <div className="bg-[#ff3b4a] text-white rounded-2xl  px-4 md:px-8 lg:px-20 xl:px-44 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <h2 className="text-2xl md:text-3xl font-semibold max-w-xl leading-snug font-poppins">
           Send me a message <br />
           and make something <br />
@@ -22,7 +22,7 @@ export default function FooterSection() {
           Contact Us
           <span className="text-lg">→</span>
         </button>
-      </div>
+      </div> */}
 
       {/* 🟢 FOOTER */}
       <footer className="px-10 py-14 bg-gradient-to-r from-[#0b1f17] via-[#1c3a2b] to-[#1a3927] text-white rounded-2xl border border-white/10">
@@ -66,7 +66,7 @@ export default function FooterSection() {
               Navigation
             </h4>
             <ul className="space-y-3 text-white/70 text-sm font-poppins">
-              {["About", "Contact", "Projects", "Recent Post"].map((item) => (
+              {["About", "Contact", "Projects"].map((item) => (
                 <li key={item} className="flex items-center gap-2">
                   <span className="text-white/40">—</span> {item}
                 </li>
@@ -96,11 +96,10 @@ export default function FooterSection() {
           {/* Newsletter */}
           <div>
             <h4 className="font-semibold text-lg mb-4 font-poppins">
-              Newsletter
+              Request call?
             </h4>
             <p className="text-sm text-white/70 leading-relaxed font-poppins">
-              Subscribe for project updates, code tips, and the latest product
-              work.
+              Please Enter your email and I will contact you .
             </p>
 
             <div className="mt-5 flex items-center bg-black/30 border border-white/10 rounded-lg px-3 py-2">

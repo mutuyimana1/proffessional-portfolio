@@ -2,37 +2,86 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
+import forceImage from "./assets/force.png"
+import ticketImage from "./assets/ticket.png"
+import posImage from "./assets/image.png"
+import OutAppImage from "./assets/OutApp.png"
+import materialImage from "./assets/material.png"
 const recentWorkItems = [
   {
-    title: "House Design Generator",
+    title: "ERP & CRM Management System",
     description:
-      "Advanced AI-powered house design generator allowing users to create custom architectural designs by specifying preferences like style, room count, and area. Create beautiful homes tailored to your needs.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1582073566048-8c5a27da55d8?auto=format&fit=crop&w=1200&q=80",
-    visitUrl: "/house-design-generator",
-    isInternal: true,
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-  },
-  {
-    title: "Latest Designs Showcase",
-    description:
-      "Browse and explore the latest house designs created by our community. View featured designs, architectural styles, room configurations, and get inspired by stunning creations.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80",
-    visitUrl: "/latest-designs",
-    isInternal: true,
-    technologies: ["React", "React Router", "Responsive Design", "Motion"],
-  },
-  {
-    title: "Advanced computer programming coding Bootcamp [STEM]",
-    description:
-      "Advanced computer programming coding Bootcamp[STEM] for young women and girls in Rwanda.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1590647190717-d4b5fa6013f3?auto=format&fit=crop&w=1200&q=80",
+      "Enterprise ERP and CRM platform developed for managing sales, inventory, finance, customer operations, and reporting workflows with integrated RRA and Mobile Money services.",
+    imageUrl:forceImage,
     visitUrl: "#",
     isInternal: false,
-    technologies: ["Next.js", "Python", "Django", "Firebase", "Figma"],
+    technologies: [
+      "Node.js",
+      "TypeScript",
+      "React.js",
+      "PostgreSQL",
+      "REST APIs",
+    ],
+  },
+  {
+    title: "Device Installment Management App",
+    description:
+      "Mobile application for managing customer device installment payments, tracking repayment progress, and improving customer engagement through seamless mobile experiences.",
+    imageUrl:posImage,
+    visitUrl: "#",
+    isInternal: false,
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Node.js",
+      "Mobile Money",
+      "Authentication",
+    ],
+  },
+  {
+    title: "OuttApp Event Management Platform",
+    description:
+      "Event management platform with real-time features, authentication systems, and responsive user experiences that improved user interaction and engagement.",
+    imageUrl:OutAppImage,
+    visitUrl: "#",
+    isInternal: false,
+    technologies: [
+      "React Native",
+      "React.js",
+      "Node.js",
+      "Realtime Features",
+      "REST APIs",
+    ],
+  },
+  {
+    title: "Ticket Management System",
+    description:
+      "Scalable ticket and support management system designed to streamline issue tracking, customer support workflows, and operational efficiency.",
+    imageUrl:ticketImage,
+    visitUrl: "#",
+    isInternal: false,
+    technologies: [
+      "React.js",
+      "Node.js",
+      "TypeScript",
+      "MongoDB",
+      "Dashboard UI",
+    ],
+  },
+  {
+    title: "Software Engineering Training Platform",
+    description:
+      "Digital learning and mentorship platform used for training students in full-stack and mobile software development with real-world project collaboration.",
+    imageUrl:materialImage,
+    visitUrl: "#",
+    isInternal: false,
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Figma",
+      "Project Management",
+      "API Documentation",
+    ],
   },
 ];
 
@@ -45,14 +94,14 @@ export default function RecentWorkSection() {
   }
 
   function onNext() {
-    setIndex((prev) => (prev === recentWorkItems.length - 1 ? 0 : prev + 1));
+    setIndex((prev) =>
+      prev === recentWorkItems.length - 1 ? 0 : prev + 1
+    );
   }
-
-  const selectedItem = recentWorkItems[index];
 
   return (
     <motion.section
-      className="mts-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounxded-2xl bg-gradient-to-r from-[#212020] via-[#2C291E] to-[#36321C]"
+      className="mt-10 p-8 px-4 md:px-8 lg:px-20 xl:px-44 rounded-2xl bg-gradient-to-r from-[#212020] via-[#2C291E] to-[#36321C]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -62,9 +111,10 @@ export default function RecentWorkSection() {
         <h2 className="text-3xl md:text-4xl font-bold text-white font-poppins">
           Recent Projects
         </h2>
+
         <p className="mt-3 text-white/70 max-w-2xl mx-auto font-poppins">
-          Recent work I delivered for operations, education, and customer-facing
-          platforms.
+          Selected enterprise, mobile, and customer-focused systems I developed
+          using modern full-stack technologies.
         </p>
       </div>
 
@@ -72,19 +122,21 @@ export default function RecentWorkSection() {
         {recentWorkItems.map((item, i) => (
           <article
             key={item.title}
-            className={`rounded-xl border border-white/15 overflow-hidden transition-all ${
-              i === index ? "shadow-2xl scale-105" : "opacity-80"
+            className={`rounded-xl border border-white/15 overflow-hidden transition-all duration-300 ${
+              i === index ? "shadow-2xl scale-[1.02]" : "opacity-90"
             }`}
           >
-            <div
-              className="h-56 bg-center bg-cover"
-              style={{ backgroundImage: `url(${item.imageUrl})` }}
-            />
-            <div className="p-5 bg-black/40">
+         <div
+  className="h-56 bg-center bg-cover"
+  style={{ backgroundImage: `url(${item.imageUrl})` }}
+/>
+
+            <div className="p-5 bg-black/40 h-full flex flex-col">
               <h3 className="text-xl font-semibold text-white font-poppins">
                 {item.title}
               </h3>
-              <p className="mt-2 text-sm text-white/70 font-poppins">
+
+              <p className="mt-2 text-sm text-white/70 font-poppins leading-relaxed">
                 {item.description}
               </p>
 
@@ -101,25 +153,27 @@ export default function RecentWorkSection() {
               </div>
 
               {/* Visit Link */}
-              {item.isInternal ? (
-                <button
-                  // onClick={() => navigate(item.visitUrl)}
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-green-400 transition-colors"
-                >
-                  Visit Project
-                  <ExternalLink size={16} />
-                </button>
-              ) : (
-                <a
-                  href={item.visitUrl}
-                  // target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green hover:text-green-400 transition-colors"
-                >
-                  Visit Project
-                  <ExternalLink size={16} />
-                </a>
-              )}
+              <div className="mt-auto pt-5">
+                {item.isInternal ? (
+                  <button
+                    onClick={() => navigate(item.visitUrl)}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-300 hover:text-yellow-400 transition-colors"
+                  >
+                    Visit Project
+                    <ExternalLink size={16} />
+                  </button>
+                ) : (
+                  <a
+                    href={item.visitUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-yellow-300 hover:text-yellow-400 transition-colors"
+                  >
+                    Visit Project
+                    <ExternalLink size={16} />
+                  </a>
+                )}
+              </div>
             </div>
           </article>
         ))}
@@ -128,14 +182,15 @@ export default function RecentWorkSection() {
       <div className="mt-6 flex items-center justify-center gap-4">
         <button
           onClick={onPrev}
-          className="h-10 w-10 rounded-full border border-white/30 text-white hover:bg-white/10"
+          className="h-10 w-10 rounded-full border border-white/30 text-white hover:bg-white/10 transition"
           aria-label="Previous recent work"
         >
           &#8592;
         </button>
+
         <button
           onClick={onNext}
-          className="h-10 w-10 rounded-full border border-white/30 text-white hover:bg-white/10"
+          className="h-10 w-10 rounded-full border border-white/30 text-white hover:bg-white/10 transition"
           aria-label="Next recent work"
         >
           &#8594;

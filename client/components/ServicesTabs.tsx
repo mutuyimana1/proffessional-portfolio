@@ -44,13 +44,13 @@ const servicesData: Record<string, ServiceCard[]> = {
     {
       title: "API Development",
       description:
-        "Design and build RESTful and GraphQL APIs with Node.js, Express, Django, and PostgreSQL.",
+        "Design and build RESTful and GraphQL APIs with Node.js, Express, and PostgreSQL.",
       icon: Puzzle,
     },
     {
       title: "Database Design",
       description:
-        "Model data for reliability and scale, with secure integration across services.",
+        "Model data for reliability and scale, with secure integration across services. with PostgreSQL and MongoDB",
       icon: Database,
     },
     {
@@ -134,9 +134,9 @@ export default function ServicesTabs() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">{card.title}</h3>
             <p className="text-white/70 font-poppins">{card.description}</p>
-            <div className="mt-4 font-semibold text-yellow-300 font-poppins">
+            {/* <div className="mt-4 font-semibold text-yellow-300 font-poppins">
               → READ MORE
-            </div>
+            </div> */}
           </article>
         ))}
       </div>

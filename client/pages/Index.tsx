@@ -55,9 +55,9 @@ export default function Index() {
       <section id="contact">
         <ContactSection />
       </section>
-      <section id="blog">
+      {/* <section id="blog">
         <LatestNewsSection />
-      </section>
+      </section> */}
       <FooterSection />
 
       {/* Back to Top Button */}
